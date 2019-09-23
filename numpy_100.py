@@ -10,25 +10,55 @@ import numpy as np
 np.version.version
 
 # 3. Create a null vector of size 10 (★☆☆)
-null_vector = np.zeros((1,10))
+null_vector = np.zeros([1,10])
 
 # 4. How to find the memory size of any array (★☆☆)
 null_vector.nbytes
 
 # 5. How to get the documentation of the numpy add function from the command line? (★☆☆)
-
+import numpy as np
+np.add?
 
 # 6. Create a null vector of size 10 but the fifth value which is 1 (★☆☆)
+null_vector_with_value = null_vector 
+null_vector_with_value[0,5] = 1
+
 # 7. Create a vector with values ranging from 10 to 49 (★☆☆)
+range_10_to_49 = np.arange(10,50)
+
 # 8. Reverse a vector (first element becomes last) (★☆☆)
+reverse_10_to_49 = np.flip(range_10_to_49)
+
 # 9. Create a 3x3 matrix with values ranging from 0 to 8 (★☆☆)
+maxtrix_0_to_8 = (np.arange(0,9)).reshape(3,3)
+
 # 10. Find indices of non-zero elements from [1,2,0,0,4,0] (★☆☆)
+a = np.array([1,2,0,0,4,0])
+non_zero = np.where(a != 0)
+
 # 11. Create a 3x3 identity matrix (★☆☆)
+identity_3_matrix = np.identity(3)
+
 # 12. Create a 3x3x3 array with random values (★☆☆)
+random_3_3_3_matrix = np.random.random([3,3,3])
+
 # 13. Create a 10x10 array with random values and find the minimum and maximum values (★☆☆)
+random_10_10_matrix = np.random.random([10,10])
+random_10_10_matrix.min()
+random_10_10_matrix.max()
+
 # 14. Create a random vector of size 30 and find the mean value (★☆☆)
+mean_random_30_vector = (np.random.random(30)).mean()
+
 # 15. Create a 2d array with 1 on the border and 0 inside (★☆☆)
+border_1_array = np.ones([3,3])
+border_1_array[1,1] = 0
+
 # 16. How to add a border (filled with 0's) around an existing array? (★☆☆)
+a = np.array([1,2,3])
+a.resize((3,5))
+border_array = np.roll(a,6)
+
 # 17. What is the result of the following expression? (★☆☆)
 # 0 * np.nan
 # np.nan == np.nan
@@ -36,11 +66,38 @@ null_vector.nbytes
 # np.nan - np.nan
 # np.nan in set([np.nan])
 # 0.3 == 3 * 0.1
+nan, False, False, nan, True, False
+
 # 18. Create a 5x5 matrix with values 1,2,3,4 just below the diagonal (★☆☆)
+a= np.zeros([5,5])
+a[1,0] = 1
+a[2,1] = 2
+a[3,2] = 3
+a[4,3] = 4
+a
+
 # 19. Create a 8x8 matrix and fill it with a checkerboard pattern (★☆☆)
+a = np.zeros([8,8])
+a[0] = np.array([0,1,0,1,0,1,0,1])
+a[2] = np.array([0,1,0,1,0,1,0,1])
+a[4] = np.array([0,1,0,1,0,1,0,1])
+a[6] = np.array([0,1,0,1,0,1,0,1])
+a[1] = np.array([1,0,1,0,1,0,1,0])
+a[3] = np.array([1,0,1,0,1,0,1,0])
+a[5] = np.array([1,0,1,0,1,0,1,0])
+a[7] = np.array([1,0,1,0,1,0,1,0])
+a
+
 # 20. Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element?
+
+
 # 21. Create a checkerboard 8x8 matrix using the tile function (★☆☆)
+a = np.array([[0,1],[1,0]])
+np.tile(a,(4,4))
+
 # 22. Normalize a 5x5 random matrix (★☆☆)
+np.random.random([5,5])
+
 # 23. Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)
 # 24. Multiply a 5x3 matrix by a 3x2 matrix (real matrix product) (★☆☆)
 
