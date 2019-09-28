@@ -16,8 +16,7 @@ null_vector = np.zeros([1,10])
 null_vector.nbytes
 
 # 5. How to get the documentation of the numpy add function from the command line? (★☆☆)
-import numpy as np
-np.add?
+# np.add?
 
 # 6. Create a null vector of size 10 but the fifth value which is 1 (★☆☆)
 null_vector_with_value = null_vector 
@@ -66,7 +65,8 @@ border_array = np.roll(a,6)
 # np.nan - np.nan
 # np.nan in set([np.nan])
 # 0.3 == 3 * 0.1
-nan, False, False, nan, True, False
+
+# nan, False, False, nan, True, False
 
 # 18. Create a 5x5 matrix with values 1,2,3,4 just below the diagonal (★☆☆)
 a= np.zeros([5,5])
@@ -89,7 +89,9 @@ a[7] = np.array([1,0,1,0,1,0,1,0])
 a
 
 # 20. Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element?
-
+a = np.zeros([6,7,8])
+a[1,4,3] = 100
+a
 
 # 21. Create a checkerboard 8x8 matrix using the tile function (★☆☆)
 a = np.array([[0,1],[1,0]])
@@ -99,15 +101,20 @@ np.tile(a,(4,4))
 np.random.random([5,5])
 
 # 23. Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)
+
+
 # 24. Multiply a 5x3 matrix by a 3x2 matrix (real matrix product) (★☆☆)
 
 # 25. Given a 1D array, negate all elements which are between 3 and 8, in place. (★☆☆)
+
+
 # 26. What is the output of the following script? (★☆☆)
 # # Author: Jake VanderPlas
-
 # print(sum(range(5),-1))
 # from numpy import *
 # print(sum(range(5),-1))
+
+
 # 27. Consider an integer vector Z, which of these expressions are legal? (★☆☆)
 # Z**Z
 # 2 << Z >> 2
